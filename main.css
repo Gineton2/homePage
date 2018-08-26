@@ -5,6 +5,13 @@ Colors:
     text: white
 */
 
+/*
+    TODO: set id offsets to compensate for sticky navbar.
+*/
+
+$nav-height-small: 100px;
+$nav-height: 60px;
+
 * {
     box-sizing: border-box;
 }
@@ -32,6 +39,12 @@ a:hover {
     transition-duration: .7s;
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    background: #303030;
+}
+
 .name {
     text-align: center;
     text-transform: uppercase;
@@ -54,6 +67,7 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     grid-row-gap: .25rem;
     max-width: 500px;
+    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -71,9 +85,19 @@ a:hover {
     margin: 10px;
 }
 
+#about-me {
+    min-width: 200px;
+    max-width: 500px;
+    min-height: 100vh;
+}
+
 #about-me p {
     margin: 10px auto auto auto;
     padding-left: 10px;
+}
+
+#contact {
     min-width: 200px;
     max-width: 500px;
+    min-height: 100vh;
 }
